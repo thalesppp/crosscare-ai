@@ -1,12 +1,14 @@
 import { sites } from "@openai/sites-vite-plugin";
 import vinext from "vinext";
 import { defineConfig } from "vite";
-import hostingConfig from "./.openai/hosting.json";
 
 const SITE_CREATOR_PLACEHOLDER_DATABASE_ID =
   "00000000-0000-4000-8000-000000000000";
 
-const { d1, r2 } = hostingConfig;
+// Keep public clones runnable without private deployment metadata. Hosted
+// environments can override these binding names through environment variables.
+const d1 = process.env.CROSSCARE_D1_BINDING?.trim() || "DB";
+const r2 = process.env.CROSSCARE_R2_BINDING?.trim() || null;
 
 // macOS Seatbelt blocks FSEvents, so Codex previews need polling for HMR.
 const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === "seatbelt";

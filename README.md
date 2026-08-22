@@ -64,8 +64,12 @@ pnpm dev
 ```bash
 pnpm db:generate
 pnpm lint
+pnpm build
 pnpm test
 ```
+
+默认数据库绑定名为 `DB`。如部署平台使用其他绑定名，可通过
+`CROSSCARE_D1_BINDING` 覆盖；公开仓库不依赖内部托管元数据即可构建。
 
 健康检查接口：`/api/health`
 
