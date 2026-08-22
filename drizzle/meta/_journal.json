@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1787328535006,
+      "tag": "0000_large_loa",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1787333231807,
+      "tag": "0001_warm_hitman",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1787334297597,
+      "tag": "0002_remove-obsolete-shopify-demo",
+      "breakpoints": true
+    }
+  ]
+}
